@@ -1,0 +1,29 @@
+.document-parent{
+display: flex;
+height: 100vh;
+}
+
+.document-left{
+    /* background-color: red; */
+    flex:5;
+    padding: 50px;
+}
+.document-right{
+    background-color: rgb(174, 174, 198);
+    flex: 2;
+    padding: 50px;
+    height: fit-content;
+}
+
+.document-title{
+    font-size: 50px;
+    margin: 20px 10px;
+}
+
+.document-body{
+    padding: 50px;
+}
+
+.doc_sub{
+    margin :10px 0px;
+}

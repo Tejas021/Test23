@@ -15,7 +15,26 @@ END;
 
 2. Get all Documents
 
-CREATE PROCEDURE get_all_documents()
+CREATE PROCEDURE get_all_documents1()
 BEGIN
     SELECT * FROM document;
 END;
+
+
+3. Get single Document
+
+
+//DELIMITER
+CREATE PROCEDURE get_single_document(IN doc_id INT)
+    BEGIN
+        SELECT * FROM document WHERE document.id=doc_id;
+    END;
+//DEMLIMITER
+
+DELIMITER $$
+CREATE PROCEDURE "get_single_document"(IN param_ID INT)
+    BEGIN
+        SELECT * FROM document WHERE ID = param_ID LIMIT 1;
+    END
+$$
+DELIMITER;
