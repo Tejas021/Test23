@@ -1,1 +1,4 @@
-com\example\HelloServlet.class
+main\java\com\example\DatabaseConnector.class
+com\example\DocumentServlet.class
+main\java\com\example\DocumentData.class
+main\java\com\example\DatabaseHandler.class

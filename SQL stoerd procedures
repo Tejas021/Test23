@@ -1,0 +1,21 @@
+1. Create A document
+
+CREATE PROCEDURE insert_document(
+    IN doc_body TEXT,
+    IN doc_title VARCHAR(255),
+    IN doc_tags JSON, -- or VARCHAR(255) for comma-separated tags
+    IN doc_accessLevel VARCHAR(50),
+    IN doc_owner VARCHAR(255) -- Add this parameter
+)
+BEGIN
+    INSERT INTO document (body, title, tags, accessLevel, owner)
+    VALUES (doc_body, doc_title, doc_tags, doc_accessLevel, doc_owner);
+END;
+
+
+2. Get all Documents
+
+CREATE PROCEDURE get_all_documents()
+BEGIN
+    SELECT * FROM document;
+END;

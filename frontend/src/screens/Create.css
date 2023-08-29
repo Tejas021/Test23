@@ -1,0 +1,107 @@
+.create-container{
+    display: flex;
+/* width: 100%; */
+}
+
+.create-right-section{
+    flex:1;
+    padding:50px;
+
+}
+
+.create-left-section{
+    padding:50px;
+    flex:2;
+}
+
+.create-title{
+    margin: 2em 0em;
+}
+
+.title-input{
+    margin: 2em 0em;
+  width:98.5%;
+    padding: 0.7em;
+    outline: none;
+    border: 0.5px solid grey;
+}
+
+.body-input{
+    margin: 2em 0em;
+    width: 100%;
+border-radius: 5px;
+}
+
+.tag-title{
+    margin: 2em 0em;
+}
+
+.tag-selector-section{
+    /* margin: auto; */
+    height: 20em;
+    width: 80%;
+    background-color: rgb(232, 184, 247);
+    border-radius: 5px;
+    margin: 2em 0em;
+padding: 20px;
+}
+
+.button-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle{
+    margin: 2em 0em;
+}
+
+.save-btn{
+    width: 70%;
+    margin: 10px auto;
+    
+}
+
+.publish-btn{
+    width: 70%;
+    margin: auto;
+}
+
+
+/* TAGS */
+
+.select-tags{
+    height: 200px;
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.selected-tags{
+    margin: 10px ;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+/* ACCESSLEVEL */
+.access-level{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(220, 220, 147);
+    font-size: 15px;
+    font-weight: 400;
+    box-shadow: none;
+    margin: 10px ;
+    text-transform: uppercase;
+}
+
+
+/* EDITOR */
+
+
+.ql-editor{
+    min-height: 300px;
+    max-height:600x;
+}
