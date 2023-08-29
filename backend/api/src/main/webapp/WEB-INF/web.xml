@@ -5,12 +5,12 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>com.example.HelloServlet</servlet-class>
+        <servlet-name>DocumentServlet</servlet-name>
+        <servlet-class>com.example.DocumentServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
+        <servlet-name>DocumentServlet</servlet-name>
+        <url-pattern>/document</url-pattern>
     </servlet-mapping>
 </web-app>
