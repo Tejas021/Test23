@@ -5,6 +5,7 @@ import Navbar from "./utils/Navbar";
 import "./App.css"
 import Create from "./screens/Create";
 import Groups from "./screens/Groups";
+import Documentation from "./screens/Documentation";
 function App() {
   return (
 
@@ -18,6 +19,7 @@ function App() {
     <Route path="/login" element={<Login/>}></Route>
     <Route path="/create" element={<Create/>}></Route>
     <Route path="/group" element={<Groups/>}></Route>
+    <Route path="/document/:id" element={<Documentation/>}></Route>
     </Routes>
   </Router>
     </div>
