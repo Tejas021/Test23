@@ -6,6 +6,7 @@ import "./App.css"
 import Create from "./screens/Create";
 import Groups from "./screens/Groups";
 import Documentation from "./screens/Documentation";
+import AllDocs from "./screens/AllDocs";
 function App() {
   return (
 
@@ -20,6 +21,7 @@ function App() {
     <Route path="/create" element={<Create/>}></Route>
     <Route path="/group" element={<Groups/>}></Route>
     <Route path="/document/:id" element={<Documentation/>}></Route>
+    <Route path="/all/:type" element={<AllDocs/>}></Route>
     </Routes>
   </Router>
     </div>

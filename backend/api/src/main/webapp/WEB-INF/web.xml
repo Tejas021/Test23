@@ -11,6 +11,7 @@
 
     <servlet-mapping>
         <servlet-name>DocumentServlet</servlet-name>
-        <url-pattern>/document</url-pattern>
+        <url-pattern>/document/all</url-pattern>
+        <url-pattern>/document/*</url-pattern>
     </servlet-mapping>
 </web-app>

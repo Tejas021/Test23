@@ -39,7 +39,7 @@ border-radius: 5px;
 .tag-selector-section{
     /* margin: auto; */
     height: 20em;
-    width: 80%;
+    width: 90%;
     
     border-radius: 5px;
     margin: 2em 0em;
@@ -56,13 +56,13 @@ padding: 20px;
 }
 
 .save-btn{
-    width: 70%;
+    width: 100%;
     margin: 10px auto;
     
 }
 
 .publish-btn{
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 

@@ -4,11 +4,13 @@
     width: 20%;
     border-radius: 10px;
     padding: 20px;
-margin: 1em 0em;;
+margin: 1em 1em;;
     cursor:pointer;
 }
 
 
 .document-card:hover{
-    background-color: rgb(150, 215, 150);
+    background-color: rgb(165, 207, 245);
+
+    
 }

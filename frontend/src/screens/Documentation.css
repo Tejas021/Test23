@@ -1,28 +1,42 @@
 .document-parent{
 display: flex;
-height: 100vh;
+
 }
 
 .document-left{
     /* background-color: red; */
     flex:5;
-    padding: 50px;
+    padding: 30px;
+    /* height: 80vh; */
 }
 .document-right{
     flex: 2;
     padding: 100px 50px;
     height: fit-content;
+    position:sticky;
+    top: 1em;
+    
 }
 
 .document-title{
-    font-size: 50px;
+    font-size: 40px;
     margin: 20px 10px;
 }
 
 .document-body{
     padding: 50px;
+    height: 3000px;
 }
 
-.doc_sub{
+.doc-sub{
     margin :10px 0px;
+    font-weight: 600;
+}
+
+.info-val{
+margin: 20px 5px ;
+}
+
+.timeago{
+    margin-left: 20px;
 }

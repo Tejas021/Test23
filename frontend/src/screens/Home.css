@@ -15,7 +15,7 @@ text-transform: uppercase;
 .document-card-container{
     margin: 1em 0em;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap:wrap
 }
 
@@ -41,9 +41,9 @@ font-size: 15px;
 .search-bar{
     flex:5;
 border-radius: 5px 0px 0px 5px;
-/* border: none; */
+border: 1px solid grey;
 /* background-color: rgb(212, 223, 234); */
-outline: none;
+/* outline: none; */
 padding: 10px 10px;
 font-size: 15px;
 }
