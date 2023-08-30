@@ -1,5 +1,5 @@
 .navbar{
-    background-color: #121212;
+   
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -43,8 +43,8 @@
 }
 
 .logout{
-    background-color: red;
+    
     text-transform: uppercase;
-    color: white;
+    color: black;
 }
 

@@ -9,9 +9,8 @@ height: 100vh;
     padding: 50px;
 }
 .document-right{
-    background-color: rgb(174, 174, 198);
     flex: 2;
-    padding: 50px;
+    padding: 100px 50px;
     height: fit-content;
 }
 
