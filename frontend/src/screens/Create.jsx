@@ -79,7 +79,7 @@ const Create = () => {
 
       <div className="create-right-section">
         <h3 className="subtitle">Add Tags:</h3>
-        <div className="tag-selector-section">
+        <div className="tag-selector-section bg-blue">
       
       <h3>Select Tags:</h3>
             <select multiple value={selectedTags} onChange={handleTagSelection} className="select-tags">
@@ -93,7 +93,7 @@ const Create = () => {
 
 <div className="selected-tags">
 {selectedTags?.map((tag) => (
-            <TagBubble tag={tag}/>
+            <TagBubble color={"bg-red"} tag={tag}/>
           ))}
 </div>
 
@@ -102,7 +102,7 @@ const Create = () => {
         <h3 className="">Select Access Level:</h3>
 
     
-          <select className="access-level" value={accessLevel} onChange={handleAccessLevelChange}>
+          <select className="access-level bg-red" value={accessLevel} onChange={handleAccessLevelChange}>
             <option value="private">Private</option>
             <option value="public">Public</option>
           </select>
@@ -111,7 +111,7 @@ const Create = () => {
 
           <h3 className="">Select Group:</h3> 
 
-          <select className="access-level" value={accessLevel} onChange={handleAccessLevelChange}>
+          <select className="access-level bg-yellow" value={accessLevel} onChange={handleAccessLevelChange}>
             <option value="private">Private</option>
             <option value="public">Public</option>
           </select>

@@ -38,3 +38,47 @@ CREATE PROCEDURE "get_single_document"(IN param_ID INT)
     END
 $$
 DELIMITER;
+
+
+4. Create group 
+
+DELIMITER //
+
+CREATE PROCEDURE create_group(
+    IN groupName VARCHAR(255),
+    IN groupDescription TEXT
+)
+BEGIN
+    INSERT INTO user_groups (name, description) VALUES (groupName, groupDescription);
+END;
+
+//
+
+DELIMITER ;
+
+5. Fetch all groups 
+
+DELIMITER //
+
+CREATE PROCEDURE fetch_all_groups()
+BEGIN
+    SELECT * FROM user_groups;
+END;
+
+//
+
+DELIMITER ;
+
+
+6. Get Single User by ID
+
+DELIMITER //
+
+CREATE PROCEDURE fetch_group_by_id(IN groupId INT)
+BEGIN
+    SELECT * FROM user_groups WHERE id = groupId;
+END;
+
+//
+
+DELIMITER ;

@@ -11,3 +11,39 @@ body {
     
 
 }
+
+/* THEME-COLORS */
+
+.bg-red{
+  background-color: #f9D8D6;
+}
+
+.bg-green{
+  background-color: #cde9d6;
+}
+
+.bg-yellow{
+  background-color: #fff1cb;
+}
+
+.bg-blue{
+  background-color: #d2e4fd;
+}
+
+
+.bg-black{
+  background-color: #292929;
+}
+
+.text-light{
+color: #fff;
+}
+.text-dark{
+  color: #272727;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+/* .ng- */

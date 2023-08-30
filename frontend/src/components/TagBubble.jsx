@@ -1,8 +1,8 @@
 import React from 'react'
 import "./TagBubble.css"
-const TagBubble = ({tag}) => {
+const TagBubble = ({tag,color}) => {
   return (
-    <div className='tag-bubble'>{tag}</div>
+    <div className={`tag-bubble ${color}`}>{tag}</div>
   )
 }
 

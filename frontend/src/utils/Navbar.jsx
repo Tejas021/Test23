@@ -4,9 +4,9 @@ import "./Navbar.css"
 const Navbar = () => {
   const [user, setUser] = useState({name:"tejas.ko"})
   return (
-    <nav className='navbar'>
+    <nav className='navbar bg-black'>
       <div className='nav-icon'>
-          <h2 className='logo'>DocX</h2>
+      <h2 className='logo'>DocX</h2>
       </div>
       <ul className='nav-tab'>
       <li className='nav-item'><Link  className='nav-link' to="/">home</Link></li>
@@ -23,9 +23,9 @@ const Navbar = () => {
       <div className='nav-user'>
         {
         user?
-        <><p>Logged in as {user.name}</p><Link className='nav-link' onClick={()=>setUser(null)}><button className='btn logout'>logout</button></Link></>
+        <><p>Logged in as {user.name}</p><Link className='nav-link' onClick={()=>setUser(null)}><button className='btn logout bg-red text-dark'>logout</button></Link></>
         :
-        <> <p>You are a guest</p>   <Link className='nav-link ' to="/login"><button className='btn logout'>login</button></Link></>
+        <> <p>You are a guest</p>   <Link className='nav-link ' to="/login"><button className='btn logout bg-red text-dark'>login</button></Link></>
         }
       
       </div>
