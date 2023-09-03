@@ -35,6 +35,10 @@ body {
   background-color: #292929;
 }
 
+.bg-grey{
+  background-color: gray;
+}
+
 .text-light{
 color: #fff;
 }

@@ -36,7 +36,17 @@ public class DocumentServlet extends HttpServlet {
                 System.out.println("all");
                 List<DocumentData> documents = DocumentHandler.getAllDocuments();
                 jsonDocuments = jsonResponse(documents);
-            } else if (pathInfo.startsWith("/document/")) {
+            } else if (pathInfo.startsWith("/document/byemail/")) {
+                String[] pathParts = pathInfo.split("/");
+                if (pathParts.length != 4) {
+                    response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid email path");
+                    return;
+                }
+                System.out.println(pathParts[3]);
+                String ownerEmail = pathParts[3];
+                List<DocumentData> documentsByEmail = DocumentHandler.getDocumentsByEmail(ownerEmail);
+                jsonDocuments = jsonResponse(documentsByEmail);
+            }else if (pathInfo.startsWith("/document/")) {
                 String[] pathParts = pathInfo.split("/");
                 if (pathParts.length != 3) {
                     response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid document path");
@@ -55,8 +65,7 @@ public class DocumentServlet extends HttpServlet {
         // Set content type to JSON
         response.setContentType("application/json");
         response.setHeader("Access-Control-Allow-Origin", "*"); // Allow requests from any origin
-        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // Allow specific HTTP
-                                                                                               // methods
+        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // Allow specific HTTP                                                                                     // methods
         response.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
 
         // Serialize the Map to JSON

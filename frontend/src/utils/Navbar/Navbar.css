@@ -1,0 +1,50 @@
+.navbar{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.2em;
+}
+
+.nav-icon{
+    width: 20em;
+    text-align: center;
+}
+
+.logo{
+    color: white;
+}
+
+.nav-tab{
+    display: flex;
+    list-style: none;
+    width: 70%;
+    justify-content: center;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+    margin: 0px 1rem;
+    text-transform: uppercase;
+}
+
+.nav-item{
+    text-decoration: none;
+    
+}
+
+.nav-user{
+    width: 20em;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logout{
+    
+    text-transform: uppercase;
+
+}
+

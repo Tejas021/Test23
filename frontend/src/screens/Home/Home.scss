@@ -1,0 +1,49 @@
+
+
+
+/* ADD NEW */
+
+.add-button{
+font-size: 15px;
+text-transform: uppercase;
+
+}
+
+
+/* ALL DOCUMENTS */
+
+.document-card-container{
+    margin: 1em 0em;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap
+}
+
+
+/* SEARCH */
+
+.search-form{
+display: flex;
+width: 60%;
+margin: auto;
+
+}
+
+.search-button{
+    flex: 1;
+border-radius:0px 5px 5px 0px !important ;
+text-transform: uppercase;
+
+padding: 15px 15px !important;
+font-size: 15px;
+}
+
+.search-bar{
+    flex:5;
+border-radius: 5px 0px 0px 5px;
+border: 1px solid grey;
+/* background-color: rgb(212, 223, 234); */
+/* outline: none; */
+padding: 10px 10px;
+font-size: 15px;
+}
