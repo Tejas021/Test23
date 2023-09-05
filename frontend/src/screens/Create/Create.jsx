@@ -1,49 +1,32 @@
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
 import axios from "axios";
 import "react-quill/dist/quill.snow.css";
 import "./Create.css";
 import TagBubble from "../../components/TagBubble/TagBubble";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import ReactQuillComponent from "../../components/ReactQuill/ReactQuillComponent";
+import GoogleDocs from "../../components/GoogleDocs/GoogleDocs";
+import { Gitlab } from "../../components/Gitlab/Gitlab";
 const Create = () => {
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.auth.currentUser.email);
-
+  const user = useSelector((state) => state.auth.currentUser?.email);
+  const [uploadType, setUploadType] = useState("quill");
   const [title, setTitle] = useState("");
-  const [body, setBody] = useState({});
-  const [googleDocsLink, setGoogleDocsLink] = useState("");
+  const [body, setBody] = useState("");
+
   const [accessLevel, setAccessLevel] = useState("private");
   const [selectedTags, setSelectedTags] = useState([]);
-  const [groupId, setGroupId] = useState({});
   const predefinedTags = ["update", "new", "flux", "downgrade", "deprecation"];
-  const oauthtoken = useSelector(
-    (state) => state.auth.currentUser.access_token
-  );
 
   const resetState = () => {
     setTitle("");
-    setBody("");
-    setGoogleDocsLink("");
+    setBody();
     setAccessLevel("private");
     setSelectedTags([]);
   };
 
-  const fetchDocument = () => {
-    const docId = googleDocsLink.split("/")[5];
-
-    console.log(docId, oauthtoken);
-    axios
-      .get(
-        `http://localhost:8080/api/googleapi/?token=${oauthtoken}&documentId=${docId}`
-      )
-      .then((res) => {
-        setBody(extractPlainText(res.data));
-        setTitle(res.data.title);
-      });
-  };
-
   const handleSaveDocument = () => {
+    console.log(body);
     axios
       .post("http://localhost:8080/api/document", {
         title: title,
@@ -60,24 +43,6 @@ const Create = () => {
     setAccessLevel(event.target.value);
   };
 
-  const extractPlainText = (document) => {
-    let plainText = "";
-
-    if (document.body && document.body.content) {
-      document.body.content.forEach((content) => {
-        if (content.paragraph && content.paragraph.elements) {
-          content.paragraph.elements.forEach((element) => {
-            if (element.textRun && element.textRun.content) {
-              plainText += element.textRun.content;
-            }
-          });
-        }
-      });
-    }
-
-    return plainText;
-  };
-
   const handleTagSelection = (event) => {
     const selectedTag = event.target.value;
     if (selectedTags.includes(selectedTag)) {
@@ -88,11 +53,11 @@ const Create = () => {
   };
 
   return (
-    <div className="container create-container homez">
+    <div className=" create-container homez">
       <div className="create-left-section">
         <h2 className="create-title">Create a New Documentation</h2>
 
-        <h3>Enter the title:</h3>
+        <h3 className="create-subtitle">Enter the title:</h3>
 
         <input
           className="title-input"
@@ -101,41 +66,58 @@ const Create = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
 
-        <h3>Complete Writing : </h3>
+        <h3 className="create-subtitle">Select Creation Method :</h3>
+        <div className="tabs">
+          <div
+            className={`tab ${uploadType === "quill" ? "tab-active" : ""}`}
+            onClick={() => setUploadType("quill")}
+          >
+            Write
+          </div>
+          <div
+            className={`tab ${uploadType === "docs" ? "tab-active" : ""}`}
+            onClick={() => setUploadType("docs")}
+          >
+            Google Docs
+          </div>
+          <div
+            className={`tab ${uploadType === "gitlab" ? "tab-active" : ""}`}
+            onClick={() => setUploadType("gitlab")}
+          >
+            Git Lab
+          </div>
+        </div>
 
-        <ReactQuill
-          className="body-input"
-          theme="snow"
-          value={body}
-          onChange={setBody}
-          modules={{
-            toolbar: {
-              container: [
-                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                ["bold", "italic", "underline"],
-                [{ list: "ordered" }, { list: "bullet" }],
-                [{ align: [] }],
-                ["link", "image"],
-                ["clean"],
-                [{ color: [] }],
-              ],
-            },
-          }}
-        />
-
-        <h3 className="">Import from google drive :</h3>
-        <input
-          className="googledocs-link"
-          value={googleDocsLink}
-          onChange={(e) => setGoogleDocsLink(e.target.value)}
-        />
-        <button className="btn bg-blue" onClick={fetchDocument}>
-          Populate
+        {/* <button
+          className="btn bg-yellow toggleButton"
+          onClick={() => setUploadType("quill")}
+        >
+          Write
         </button>
+        <button
+          className="btn bg-blue toggleButton"
+          onClick={() => setUploadType("docs")}
+        >
+          GoogleDocs
+        </button>
+        <button
+          className="btn bg-red toggleButton"
+          onClick={() => setUploadType("gitlab")}
+        >
+          GitLab
+        </button> */}
+
+        {uploadType === "quill" ? (
+          <ReactQuillComponent body={body} setBody={setBody} />
+        ) : uploadType === "docs" ? (
+          <GoogleDocs body={body} setBody={setBody} />
+        ) : (
+          <Gitlab body={body} setBody={setBody} />
+        )}
       </div>
 
       <div className="create-right-section">
-        <h3 className="subtitle">Add Tags:</h3>
+        <h3 className="create-subtitle">Add Tags:</h3>
         <div className="tag-selector-section bg-blue">
           <h3>Select Tags:</h3>
           <select

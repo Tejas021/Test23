@@ -4,7 +4,9 @@ main\java\com\example\DatabaseConnector.class
 com\example\DocumentServlet.class
 main\java\com\example\DocumentData.class
 main\java\com\example\DocumentGroup\DocumentGroupData.class
+main\java\com\example\DocumentSearchServlet.class
 main\java\com\example\GoogleAPI\GoogleAPIServlet.class
 main\java\com\example\Groups\GroupHandler.class
 main\java\com\example\DocumentGroup\DocumentGroupServlet.class
+main\java\com\example\GitLabAPI\GITLabAPIServlet.class
 main\java\com\example\DocumentHandler.class

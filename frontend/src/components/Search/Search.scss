@@ -1,0 +1,47 @@
+.search-element{
+    width: 90%;
+    margin: auto;
+padding: 10px;
+border-radius: 5px;
+margin: 5px auto;
+cursor: pointer;
+box-sizing: border-box;
+}
+
+.search-element:hover{
+    background-color:pink;
+}
+
+.search-results{
+    position: absolute;
+    width:100%;
+    padding: 20px 0px;
+ 
+    // border-radius: 5px;
+    max-height: 300px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    border-top: 0px;
+}
+
+.search-relative{
+    position: relative;
+    margin: auto;
+    // background-color: red;
+    padding: 20px 0px;
+    width: 60%;
+    border-radius: 5px;
+    max-height: 400px;
+    
+    border: 1px solid black;
+    button{
+        margin: 10px;
+    }
+    
+}
+
+.search-parent{
+    // background-color: pink;
+    
+    
+}

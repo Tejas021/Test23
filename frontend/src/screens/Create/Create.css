@@ -5,17 +5,17 @@
 
 .create-right-section{
     flex:1;
-    padding:50px;
+    padding:30px 50px;
 
 }
 
 .create-left-section{
-    padding:50px;
+    padding:30px 50px;
     flex:2;
 }
 
 .create-title{
-    margin: 2em 0em;
+    margin: 1em 0em 2em 0em;
 }
 
 .title-input{
@@ -120,4 +120,46 @@ padding: 20px;
     border: 1px solid black;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+
+.toggleButton{
+margin: 20px 10px;        
+width: 100px;
+}
+
+
+.tabs{
+   
+    display: flex;
+
+}
+
+.tab{
+    flex: 1;
+    padding: 7px 10px;
+    /* border-left: 1px orange solid;
+    border-right: 1px orange solid; */
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    /* border-right:  0.5px grey solid;
+    border-left: 0.5px grey solid; */
+    font-size: 12px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(84, 199, 237);
+}
+.tab:hover{
+    border-bottom:5px rgb(84, 199, 237) solid ;
+}
+
+.tab-active{
+    border-bottom:5px solid rgb(84, 199, 237);
+}
+
+.create-subtitle{
+
+font-weight: 500;
+margin-bottom:  20px;
+margin-top: 20px;
 }

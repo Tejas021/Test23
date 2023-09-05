@@ -39,6 +39,14 @@ body {
   background-color: gray;
 }
 
+.bg-orange{
+  background-color: #FBCEB1;
+}
+
+.bg-white{
+background-color: white;
+}
+
 .text-light{
 color: #fff;
 }

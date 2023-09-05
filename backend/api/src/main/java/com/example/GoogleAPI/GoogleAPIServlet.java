@@ -27,9 +27,9 @@ public class GoogleAPIServlet extends HttpServlet {
         StringBuilder response1 = new StringBuilder();
         String oauthToken = request.getParameter("token");
         String documentId = request.getParameter("documentId");
-        System.out.println(oauthToken + documentId);
         try {
-            String url = "https://docs.googleapis.com/v1/documents/" + documentId;
+
+            String url = " https://www.googleapis.com/drive/v3/files/" + documentId + "/export?mimeType=text/html";
             URL apiUrl = new URL(url);
 
             HttpURLConnection connection = (HttpURLConnection) apiUrl.openConnection();
@@ -50,7 +50,7 @@ public class GoogleAPIServlet extends HttpServlet {
             reader.close();
 
             // Print the response data
-            System.out.println("Response Data:\n" + response1.toString());
+            // System.out.println("Response Data:\n" + response1.toString());
 
             // Close the connection
             connection.disconnect();

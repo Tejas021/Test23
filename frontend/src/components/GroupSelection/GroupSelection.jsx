@@ -31,6 +31,7 @@ const GroupSelection = ({ documentId }) => {
           setselectedGroup(e.target.value);
           console.log(option.current.value);
         }}
+        className="access-level bg-yellow"
       >
         {groups.map((g) => (
           <option id={g.title} value={g.id} name={g.title}>
@@ -39,7 +40,9 @@ const GroupSelection = ({ documentId }) => {
         ))}
       </select>
 
-      <button onClick={() => handleSubmit()}>Add</button>
+      <button onClick={() => handleSubmit()} className="btn bg-green">
+        Add
+      </button>
     </div>
   );
 };

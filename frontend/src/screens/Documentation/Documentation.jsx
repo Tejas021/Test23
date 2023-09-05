@@ -28,6 +28,7 @@ const Documentation = () => {
   return (
     <div className="container document-parent">
       <div className="document-left">
+        {console.log(doc)}
         <h1 className="document-title">{doc.title}</h1>
         <p className="timeago">Updated {moment(doc.updatedAt).fromNow()}</p>
         <div

@@ -4,16 +4,21 @@ import { Link } from "react-router-dom";
 import DocumentCard from "../../components/DocumentCard/DocumentCard";
 import "./Home.scss";
 import GroupCard from "../../components/GroupCard/GroupCard";
+import { useSelector } from "react-redux";
+import { Search } from "../../components/Search/Search";
 const Home = () => {
   const [data, setData] = useState([]);
   const [allData, setAllData] = useState([]);
+  const [groups, setGroups] = useState([]);
+  const user = useSelector((state) => state.auth.currentUser);
 
   useEffect(() => {
     console.log("teS");
-    axios
-      .get("http://localhost:8080/api/document/byemail/tejas.ko@media.net")
-      .then((res) => setData(res.data));
-  }, []);
+    user &&
+      axios
+        .get(`http://localhost:8080/api/document/byemail/${user.email}`)
+        .then((res) => setData(res.data));
+  }, [user]);
 
   useEffect(() => {
     console.log("teS");
@@ -21,17 +26,20 @@ const Home = () => {
       .get("http://localhost:8080/api/document/all")
       .then((res) => setAllData(res.data));
   }, []);
+
+  useEffect(() => {
+    console.log("teS");
+    axios
+      .get("http://localhost:8080/api/group/all")
+      .then((res) => setGroups(res.data));
+  }, []);
+
   return (
     <div className="container">
       {console.log(JSON.stringify(data))}
 
       {/* SEARCH */}
-      <div className="search-form">
-        <input className="search-bar" />
-        <button className="btn search-button  bg-green text-dark">
-          Search
-        </button>
-      </div>
+      <Search />
 
       <button className="btn bg-blue add-button text-dark">
         <Link className="link add-button" to="/create">
@@ -52,19 +60,23 @@ const Home = () => {
 
       <h2 className="subtitle">Your Documentations:</h2>
       <div className="document-card-container">
-        {data.slice(0, 8)?.map((document) => (
-          <DocumentCard color={"bg-green"} document={document} />
-        ))}
+        {user
+          ? data
+              .slice(0, 8)
+              ?.map((document) => (
+                <DocumentCard color={"bg-green"} document={document} />
+              ))
+          : "Login to see your documents"}
       </div>
-      <Link to={"/all/shared"}>See all</Link>
+      {user && <Link to={"/all/shared"}>See all</Link>}
 
       <h2 className="subtitle">Your Groups :</h2>
       <div className="document-card-container">
-        {data.slice(0, 8)?.map((document) => (
-          <GroupCard group={{ title: "test" }} />
+        {groups.slice(0, 8)?.map((group) => (
+          <GroupCard group={group} />
         ))}
       </div>
-      <Link to={"/all/shared"}>See all</Link>
+      <Link to={"/groups"}>See all</Link>
     </div>
   );
 };
