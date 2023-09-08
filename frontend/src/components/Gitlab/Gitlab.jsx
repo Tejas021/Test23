@@ -72,11 +72,6 @@ export const Gitlab = ({ body, setBody }) => {
 
   return (
     <div className="gitlab-parent" ref={markdown}>
-      <h3 className="create-subtitle">Preview:</h3>
-      <div>
-        <ReactMarkdown>{temp}</ReactMarkdown>
-      </div>
-
       <h3 className="create-subtitle">Import from Gitlab :</h3>
 
       <input
@@ -86,9 +81,13 @@ export const Gitlab = ({ body, setBody }) => {
         className="googledocs-link"
       />
 
-      <button onClick={() => handleSubmit()} className="btn bg-red">
+      <button onClick={() => handleSubmit()} className="btn bg-blue pop-button">
         Populate
       </button>
+      <h3 className="create-subtitle">Preview:</h3>
+      <div>
+        <ReactMarkdown>{temp}</ReactMarkdown>
+      </div>
     </div>
   );
 };

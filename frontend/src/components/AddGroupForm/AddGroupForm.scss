@@ -5,20 +5,22 @@
     margin: 20px;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 80%;
     height: 15em;
     justify-content: space-around;
+    border : 1px solid rgb(198,198,255);
 
     input{
         border: none;
         padding: 15px 20px;
         border-radius: 10px;
+        border : 1px solid rgb(198,198,255);
     }
 
     button{
         border: none;
         outline: none;
-        // background-color: green;
+        background-color: rgb(198,198,255);
         padding: 10px 20px;
         border-radius: 10px;
         cursor: pointer;

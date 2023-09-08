@@ -53,7 +53,7 @@ const Home = () => {
           .filter((data) => data.accessLevel === "public")
           .slice(0, 8)
           ?.map((document) => (
-            <DocumentCard color={"bg-yellow"} document={document} />
+            <DocumentCard color={"bg-blue"} document={document} />
           ))}
       </div>
       <Link to={"/all/all"}>See all</Link>
@@ -64,7 +64,7 @@ const Home = () => {
           ? data
               .slice(0, 8)
               ?.map((document) => (
-                <DocumentCard color={"bg-green"} document={document} />
+                <DocumentCard color={"bg-grey"} document={document} />
               ))
           : "Login to see your documents"}
       </div>

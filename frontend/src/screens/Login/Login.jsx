@@ -28,8 +28,8 @@ const Login = () => {
   });
   return (
     <div className="container">
-      <div className="login-container bg-green">
-        <button className="btn bg-blue " onClick={() => login()}>
+      <div className="login-container bg-blue">
+        <button className="btn bg-grey " onClick={() => login()}>
           <img src="/google.png" alt="logo"></img>Login with Google
         </button>
       </div>

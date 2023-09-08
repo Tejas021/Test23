@@ -124,7 +124,7 @@ const Create = () => {
             multiple
             value={selectedTags}
             onChange={handleTagSelection}
-            className="select-tags bg-red"
+            className="select-tags bg-grey"
           >
             {predefinedTags.map((tag) => (
               <option key={tag} value={tag} style={{ width: "50%" }}>
@@ -143,7 +143,7 @@ const Create = () => {
         <h3 className="">Select Access Level:</h3>
 
         <select
-          className="access-level bg-red"
+          className="access-level bg-grey"
           value={accessLevel}
           onChange={handleAccessLevelChange}
         >
@@ -151,26 +151,26 @@ const Create = () => {
           <option value="public">Public</option>
         </select>
 
-        <h3 className="">Select Group:</h3>
+        {/* <h3 className="">Select Group:</h3>
 
         <select
-          className="access-level bg-yellow"
+          className="access-level bg-blue"
           value={accessLevel}
           onChange={handleAccessLevelChange}
         >
           <option value="private">Private</option>
           <option value="public">Public</option>
-        </select>
+        </select> */}
 
         <div className="button-section">
           <button
-            className="btn save-btn bg-yellow"
+            className="btn save-btn bg-grey"
             onClick={() => handleSaveDocument()}
           >
             Save
           </button>
           <button
-            className="btn publish-btn bg-green"
+            className="btn publish-btn bg-blue"
             onClick={() => {
               console.log(document, body);
             }}

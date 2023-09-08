@@ -4,6 +4,9 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 1.2em;
+    border-bottom: 2px solid rgb(196,196,255);
+    /* position: fixed;
+    width: 100%; */
 }
 
 .nav-icon{
@@ -23,7 +26,7 @@
 }
 
 .nav-link{
-    color: white;
+    color: black;
     text-decoration: none;
     margin: 0px 1rem;
     text-transform: uppercase;
@@ -37,7 +40,7 @@
 .nav-user{
     width: 20em;
     text-align: center;
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
 }

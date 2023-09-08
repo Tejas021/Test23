@@ -14,9 +14,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar bg-black">
+    <nav className="navbar text-dark bg-grey">
       <div className="nav-icon">
-        <h2 className="logo">DocX</h2>
+        <h2 className="logo">
+          <span className="text-dark">Doc</span>
+          <span className="text-blue">X</span>
+        </h2>
       </div>
       <ul className="nav-tab">
         <li className="nav-item">
@@ -47,7 +50,7 @@ const Navbar = () => {
             <p>Logged in as {user1.given_name}</p>
             <Link className="nav-link">
               <button
-                className="btn logout bg-red text-dark"
+                className="btn logout bg-blue text-dark"
                 onClick={() => handleLogout()}
               >
                 logout
@@ -56,10 +59,9 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            {" "}
-            <p>You are a guest</p>{" "}
+            <p>You are a guest</p>
             <Link className="nav-link " to="/login">
-              <button className="btn logout bg-red text-dark">login</button>
+              <button className="btn logout bg-grey text-dark">login</button>
             </Link>
           </>
         )}

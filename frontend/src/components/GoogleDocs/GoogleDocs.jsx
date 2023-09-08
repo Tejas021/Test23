@@ -24,8 +24,6 @@ const GoogleDocs = ({ body, setBody }) => {
 
   return (
     <div className="googledocs-body">
-      <h3 className="create-subtitle">Preview:</h3>
-      <div dangerouslySetInnerHTML={{ __html: body }}></div>
       <h3 className="create-subtitle">Import from google drive :</h3>
       <input
         className="googledocs-link"
@@ -33,9 +31,11 @@ const GoogleDocs = ({ body, setBody }) => {
         placeholder="Google Docs Link"
         onChange={(e) => setGoogleDocsLink(e.target.value)}
       />
-      <button className="btn bg-blue" onClick={fetchDocument}>
+      <button className="btn bg-blue pop-button" onClick={fetchDocument}>
         Populate
       </button>{" "}
+      <h3 className="create-subtitle">Preview:</h3>
+      <div dangerouslySetInnerHTML={{ __html: body }}></div>
     </div>
   );
 };
