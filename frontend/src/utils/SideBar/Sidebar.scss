@@ -1,0 +1,23 @@
+.sidebar-page{
+flex:1;
+padding: 10px;
+// padding-top: 30px;
+}
+
+.folder{
+    padding:10px;
+    font-size: 18px;
+    font-weight: 500;
+border: 1px solid rgb(198, 198, 255);
+color:black;
+margin-bottom: 20px;
+
+h5{
+    margin-bottom: 5px;
+}
+}
+.file{
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+}

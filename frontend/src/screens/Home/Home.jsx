@@ -28,11 +28,21 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    console.log("teS");
     axios
-      .get("http://localhost:8080/api/group/all")
-      .then((res) => setGroups(res.data));
+      .get("http://localhost:8080/api/toc/?tocId=0")
+      .then((res) => setGroups(parseJsonArray(res.data)))
+      .catch((err) => console.log(err));
   }, []);
+
+  const parseJsonArray = (arrayOfStrings) => {
+    return arrayOfStrings.map((arr) => JSON.parse(arr));
+  };
+  // useEffect(() => {
+  //   console.log("teS");
+  //   axios
+  //     .get("http://localhost:8080/api/group/all")
+  //     .then((res) => setGroups(res.data));
+  // }, []);
 
   return (
     <div className="container">
@@ -71,7 +81,7 @@ const Home = () => {
       {user && <Link to={"/all/shared"}>See all</Link>}
 
       <h2 className="subtitle">Your Groups :</h2>
-      <div className="document-card-container">
+      <div className="document-card-container home-groups-container">
         {groups.slice(0, 8)?.map((group) => (
           <GroupCard group={group} />
         ))}

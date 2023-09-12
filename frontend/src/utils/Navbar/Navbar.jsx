@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/reducers/authSlice";
 const Navbar = () => {
   const user1 = useSelector((state) => state.auth.currentUser);
-
+  const path = useSelector((state) => state.path.currentPath);
   const dispatch = useDispatch();
 
   const handleLogout = () => {
@@ -21,6 +21,7 @@ const Navbar = () => {
           <span className="text-blue">X</span>
         </h2>
       </div>
+
       <ul className="nav-tab">
         <li className="nav-item">
           <Link className="nav-link" to="/">

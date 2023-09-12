@@ -1,10 +1,11 @@
 .group-card{
    
-    width: 18%;
+    width: 90%;
     padding: 10px 30px;
     border-radius: 10px;
     margin: 10px;
     height: 7em;
+    cursor: pointer;
 }
 
 .group-card:hover{

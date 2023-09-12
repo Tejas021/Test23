@@ -9,6 +9,9 @@ import Documentation from "./screens/Documentation/Documentation";
 import AllDocs from "./screens/AllDocs/AllDocs";
 import { useSelector } from "react-redux";
 import Group from "./screens/Group/Group";
+import TOC from "./screens/TOC/TOC";
+
+// import { TOC } from "./utils/Navbar/TOC/TOC";
 function App() {
 
   const user = useSelector(state=>state.auth.currentUser)
@@ -27,7 +30,10 @@ function App() {
     <Route path="/groups" element={<Groups/>}></Route>
     <Route path="/document/:id" element={<Documentation/>}></Route>
     <Route path="/all/:type" element={<AllDocs/>}></Route>
-    <Route path="/group/:id" element={<Group/>}></Route>
+    <Route path="/group/" element={<Group/>}></Route>
+    <Route path="/toc/" element={<TOC/>}></Route>
+    {/* <Route path="/folder/*" element={<TOC/>} /> */}
+    
     </Routes>
   </Router>
     </div>

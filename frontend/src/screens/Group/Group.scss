@@ -1,9 +1,9 @@
 .group-parent{
 
-    
+    display: flex;
 
-  width: 70%;
-margin: auto;
+//   width: 70%;
+// margin: auto;
     h3{
         margin: 20px;
     }
@@ -22,7 +22,8 @@ margin: auto;
 
 .toc{
     width: 100%;
-    margin: auto;
+  
+    flex: 7;
 
     h2{
         margin: 30px 10px;
@@ -30,7 +31,7 @@ margin: auto;
 
     div{
         padding: 20px 30px;
-        height: 4em;
+       
         margin: 10px;
         cursor: pointer;
     }
@@ -39,7 +40,7 @@ margin: auto;
     border: 1px solid rgb(197, 197, 255);
     border-left: 10px solid rgb(197, 197, 255);
     border-radius: 5px;
-    
+    height: 4em;
 
    }
 
@@ -47,6 +48,11 @@ margin: auto;
     border: 1px solid red;
     border-left: 10px solid rgb(255, 197, 197);
     border-radius: 5px;
+    height: 4em;
    }
 
+}
+
+.group-sidebar{
+flex: 2;
 }
