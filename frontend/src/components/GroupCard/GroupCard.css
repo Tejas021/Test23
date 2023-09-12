@@ -1,0 +1,13 @@
+.group-card{
+   
+    width: 90%;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin: 10px;
+    height: 7em;
+    cursor: pointer;
+}
+
+.group-card:hover{
+    background-color: rgb(136, 136, 245);
+}

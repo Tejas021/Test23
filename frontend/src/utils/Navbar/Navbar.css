@@ -1,0 +1,53 @@
+.navbar{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.2em;
+    border-bottom: 2px solid rgb(196,196,255);
+    /* position: fixed;
+    width: 100%; */
+}
+
+.nav-icon{
+    width: 20em;
+    text-align: center;
+}
+
+.logo{
+    color: white;
+}
+
+.nav-tab{
+    display: flex;
+    list-style: none;
+    width: 70%;
+    justify-content: center;
+}
+
+.nav-link{
+    color: black;
+    text-decoration: none;
+    margin: 0px 1rem;
+    text-transform: uppercase;
+}
+
+.nav-item{
+    text-decoration: none;
+    
+}
+
+.nav-user{
+    width: 20em;
+    text-align: center;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.logout{
+    
+    text-transform: uppercase;
+
+}
+

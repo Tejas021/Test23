@@ -1,0 +1,35 @@
+.group-container{
+   
+    margin-top: 30px;
+    flex: 5;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+    h2{
+        margin-bottom: 20px;
+    }
+}
+
+.group-page{
+    
+    button{ 
+        margin : 10px;
+        text-transform: uppercase;
+    }
+}
+
+.groups-parent{
+    display: flex;
+}
+
+
+.group-sidebar{
+    flex: 2;
+    // padding-top: 25px;
+    // padding:20px;
+    // margin-top: 30px;
+    h2{
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+}

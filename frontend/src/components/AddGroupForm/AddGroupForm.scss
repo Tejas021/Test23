@@ -1,0 +1,36 @@
+.add-group-form{
+    
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 12em;
+    justify-content: space-around;
+    border : 1px solid rgb(198,198,255);
+
+    input{
+        border: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        border : 1px solid rgb(198,198,255);
+        margin-bottom: 10px;
+    }
+    select{
+        border: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        border : 1px solid rgb(198,198,255);
+        margin-bottom: 10px;
+    }
+
+    button{
+        border: none;
+        outline: none;
+        background-color: rgb(198,198,255);
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}

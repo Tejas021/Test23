@@ -1,0 +1,29 @@
+.login-container{
+    margin: auto;
+    
+    width: 40%;
+    height: 70vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    // border: 0.5px solid grey;
+
+
+    button{
+        // background-color: aqua;
+        width: 80%;
+        border: 0.5px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-transform:capitalize;
+        color: grey;
+// background-color:grey;
+        img{
+        width: 20px;
+            margin-right: 25px;
+
+    }
+    }
+}

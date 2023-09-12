@@ -12,6 +12,67 @@
     <servlet-mapping>
         <servlet-name>DocumentServlet</servlet-name>
         <url-pattern>/document/all</url-pattern>
+        <url-pattern>/document/byemail/*</url-pattern>
         <url-pattern>/document/*</url-pattern>
+         
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GroupServlet</servlet-name>
+        <servlet-class>main.java.com.example.Groups.GroupServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GroupServlet</servlet-name>
+        <url-pattern>/group/all</url-pattern>
+        <url-pattern>/group/*</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+        <servlet-name>DocumentGroupServlet</servlet-name>
+        <servlet-class>main.java.com.example.DocumentGroup.DocumentGroupServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DocumentGroupServlet</servlet-name>
+        <url-pattern>/docgroup/</url-pattern>
+  
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GoogleAPIServlet</servlet-name>
+        <servlet-class>main.java.com.example.GoogleAPI.GoogleAPIServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GoogleAPIServlet</servlet-name>
+        <url-pattern>/googleapi/</url-pattern>
+  
+    </servlet-mapping>
+
+        <servlet>
+        <servlet-name>GITLabAPIServlet</servlet-name>
+        <servlet-class>main.java.com.example.GitLabAPI.GITLabAPIServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GITLabAPIServlet</servlet-name>
+        <url-pattern>/gitlabapi/</url-pattern>
+  
+    </servlet-mapping>
+
+
+     
+
+        <servlet>
+        <servlet-name>DocumentSearchServlet</servlet-name>
+        <servlet-class>main.java.com.example.DocumentSearchServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DocumentSearchServlet</servlet-name>
+        <url-pattern>/documentsearch/</url-pattern>
+  
+    </servlet-mapping> 
+
 </web-app>
