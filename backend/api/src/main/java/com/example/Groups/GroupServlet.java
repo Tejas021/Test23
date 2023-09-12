@@ -62,6 +62,7 @@ public class GroupServlet extends HttpServlet {
             System.out.println(err);
         }
 
+        // sendJsonResponse(response,jsonGroups);
         // Set content type to JSON
         response.setContentType("application/json");
         response.setHeader("Access-Control-Allow-Origin", "*"); // Allow requests from any origin
@@ -114,6 +115,7 @@ public class GroupServlet extends HttpServlet {
         response.setHeader("Access-Control-Allow-Methods", "POST,OPTIONS");
         response.setHeader("Access-Control-Allow-Headers", "Content-Type");
         response.setStatus(HttpServletResponse.SC_OK);
+
     }
 
     private String jsonResponse(Object data) {
@@ -124,6 +126,22 @@ public class GroupServlet extends HttpServlet {
         } catch (Exception e) {
             System.out.println(e);
             return null;
+        }
+
+    }
+
+    private void sendJsonResponse(HttpServletResponse response, String jsonResponse) {
+        response.setContentType("application/json");
+        response.setHeader("Access-Control-Allow-Origin", "*"); // Allow requests from any origin
+        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // Allow specific HTTP //
+                                                                                               // methods
+        response.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+        // Serialize the Map to JSON
+        // Write JSON string to the response output stream
+        try {
+            response.getWriter().write(jsonResponse);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }

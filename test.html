@@ -1,1 +1,58 @@
 <html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ul.lst-kix_j3clym1u2lpg-8{list-style-type:none}ul.lst-kix_j3clym1u2lpg-7{list-style-type:none}ul.lst-kix_j3clym1u2lpg-6{list-style-type:none}.lst-kix_j3clym1u2lpg-0>li:before{content:"\0025cf   "}li.li-bullet-0:before{margin-left:-18pt;white-space:nowrap;display:inline-block;min-width:18pt}.lst-kix_j3clym1u2lpg-5>li:before{content:"\0025a0   "}.lst-kix_j3clym1u2lpg-6>li:before{content:"\0025cf   "}.lst-kix_j3clym1u2lpg-4>li:before{content:"\0025cb   "}.lst-kix_j3clym1u2lpg-8>li:before{content:"\0025a0   "}.lst-kix_j3clym1u2lpg-3>li:before{content:"\0025cf   "}.lst-kix_j3clym1u2lpg-7>li:before{content:"\0025cb   "}ul.lst-kix_j3clym1u2lpg-1{list-style-type:none}.lst-kix_j3clym1u2lpg-2>li:before{content:"\0025a0   "}ul.lst-kix_j3clym1u2lpg-0{list-style-type:none}ul.lst-kix_j3clym1u2lpg-5{list-style-type:none}ul.lst-kix_j3clym1u2lpg-4{list-style-type:none}.lst-kix_j3clym1u2lpg-1>li:before{content:"\0025cb   "}ul.lst-kix_j3clym1u2lpg-3{list-style-type:none}ul.lst-kix_j3clym1u2lpg-2{list-style-type:none}ol{margin:0;padding:0}table td,table th{padding:0}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left;height:11pt}.c2{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c4{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c3{margin-left:36pt;padding-left:0pt}.c5{padding:0;margin:0}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c4 doc-content"><p class="c1"><span class="c2">Gsadfsasdadfsdaf</span></p><p class="c0"><span class="c2"></span></p><ul class="c5 lst-kix_j3clym1u2lpg-0 start"><li class="c1 c3 li-bullet-0"><span class="c2">Tejas is the best</span></li><li class="c1 c3 li-bullet-0"><span class="c2">Sdafdsa</span></li><li class="c1 c3 li-bullet-0"><span class="c2">Gfsadf</span></li><li class="c1 c3 li-bullet-0"><span class="c2">Sa</span></li></ul><p class="c0"><span class="c2"></span></p><p class="c1"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 624.00px;"><img alt="" src="https://lh3.googleusercontent.com/gcl56cuQZqWsaTdZr-7Mboi0UCaSa4oAllW9T2JWj2Bqk2HzscwKf2BGbTRpCQJgB8UYCqInqrv7L2A5UIif5ZrZH9Mn1TgCFyGcRkNG-rOKwOyi9dA6Xr5vdG1Lg4ORyYeqT0IeIF0PD5ud" style="width: 624.00px; height: 624.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p></body></html>
+
+
+
+
+public static JsonObject findFolderAndAppendDocument(JsonObject toc, String path, JsonObject newDocument) {
+    // Split the folder path into individual folder names
+
+    String[] folderNames = path.split("/");
+    System.out.println(path.isEmpty());
+    // Start with the root TOC object
+    JsonObject currentFolder = toc;
+
+    // Base case: If the folderNames array is empty, we've reached the target folder
+    if (path.isEmpty()) {
+        // Ensure the current folder has a 'documents' array
+        System.out.println("Caleld");
+        if (!currentFolder.has("documents")) {
+            currentFolder.add("documents", new JsonArray());
+        }
+
+        // Append the new document to the 'documents' array
+        currentFolder.getAsJsonArray("documents").add(newDocument);
+
+        return currentFolder;
+    }
+
+    // Get the first folder name in the path
+    String firstFolderName = folderNames[0];
+    System.out.println(firstFolderName);
+
+    // Check if the current folder has subfolders
+    if (currentFolder.has("subfolders") && currentFolder.get("subfolders").isJsonArray()) {
+        JsonArray subfolders = currentFolder.getAsJsonArray("subfolders");
+
+        // Iterate through subfolders to find a match
+        for (JsonElement subfolderElement : subfolders) {
+            JsonObject subfolder = subfolderElement.getAsJsonObject();
+            System.out.println(subfolder);
+            // Check if the current subfolder matches the first folder name
+            if (subfolder.has("toc_name") && subfolder.get("toc_name").getAsString().equals(firstFolderName)) {
+                // Recursively search for the rest of the path in the subfolder
+                System.out.println("found");
+                String remainingPath = String.join("/", Arrays.copyOfRange(folderNames, 1, folderNames.length));
+                JsonObject updatedSubfolder = findFolderAndAppendDocument(subfolder, remainingPath, newDocument);
+                if (updatedSubfolder != null) {
+                    subfolders.set(subfolders.indexOf(subfolderElement), updatedSubfolder);
+                }
+
+                // Return the entire updated TOC structure
+                return toc;
+            }
+        }
+    }
+
+    // If no match is found at this level, the folder path is invalid
+    return null;
+}

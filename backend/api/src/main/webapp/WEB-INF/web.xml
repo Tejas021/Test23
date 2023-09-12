@@ -75,4 +75,53 @@
   
     </servlet-mapping> 
 
+
+        <servlet>
+        <servlet-name>TOCManagementServlet</servlet-name>
+        <servlet-class>main.java.com.example.TOCManagement.TOCManagementServlet</servlet-class>
+    </servlet>
+
+    
+    <servlet-mapping>
+        <servlet-name>TOCManagementServlet</servlet-name>
+        <url-pattern>/toc/</url-pattern>
+  
+    </servlet-mapping> 
+
+            <servlet>
+        <servlet-name>TOCWithDocumentIdServlet</servlet-name>
+        <servlet-class>main.java.com.example.TOCManagement.TOCWithDocumentIdServlet</servlet-class>
+    </servlet>
+
+    
+    <servlet-mapping>
+        <servlet-name>TOCWithDocumentIdServlet</servlet-name>
+        <url-pattern>/tocByDoc/</url-pattern>
+  
+    </servlet-mapping> 
+
+    <servlet>
+        <servlet-name>AddFolderToTocServlet</servlet-name>
+        <servlet-class>main.java.com.example.TOCManagement.AddFolderToTocServlet</servlet-class>
+    </servlet>
+
+    
+    <servlet-mapping>
+        <servlet-name>AddFolderToTocServlet</servlet-name>
+        <url-pattern>/addFolderToToc/</url-pattern>
+  
+    </servlet-mapping> 
+
+      <servlet>
+        <servlet-name>GetTocStructureServlet</servlet-name>
+        <servlet-class>main.java.com.example.TOCManagement.GetTocStructureServlet</servlet-class>
+    </servlet>
+
+    
+    <servlet-mapping>
+        <servlet-name>GetTocStructureServlet</servlet-name>
+        <url-pattern>/getToc/</url-pattern>
+  
+    </servlet-mapping> 
+
 </web-app>
